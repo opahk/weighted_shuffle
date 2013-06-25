@@ -2,3 +2,4 @@ html/
 pkg/
 bin/
 .bundle/
+coverage/

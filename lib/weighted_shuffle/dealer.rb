@@ -1,8 +1,10 @@
+require 'active_support/core_ext/enumerable'
+
 module WeightedShuffle
   class Dealer < Struct.new(:array)
 
     def weighted_shuffle
-      a = array.dup
+      a = Marshal.load Marshal.dump(array)
       sum = a.sum { |k,v| v || 0.0 }
       b = []
       a.length.times do
