@@ -1,6 +1,8 @@
 # Weighted Shuffle
 
 [![Build Status](https://travis-ci.org/opahk/weighted_shuffle.png?branch=master)](https://travis-ci.org/opahk/weighted_shuffle)
+[![Coverage Status](https://coveralls.io/repos/opahk/weighted_shuffle/badge.png)](https://coveralls.io/r/opahk/weighted_shuffle)
+[![Code Climate](https://codeclimate.com/github/opahk/weighted_shuffle.png)](https://codeclimate.com/github/opahk/weighted_shuffle)
 
 An extension to the Fisher-Yates-Shuffle algorithm to support weights. It
 includes a ruby core extension convenience of arrays.
