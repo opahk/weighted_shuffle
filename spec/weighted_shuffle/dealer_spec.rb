@@ -13,7 +13,7 @@ module WeightedShuffle
             Dealer.new(input).weighted_shuffle)
         end
 
-        it 'gives correct relative frequency' do
+        it 'gives correct relative frequency for first position' do
           weights = input.map(&:last)
           # calculate probabiities
           sum = weights.sum
