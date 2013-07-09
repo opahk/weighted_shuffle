@@ -5,8 +5,11 @@ require File.expand_path('../lib/weighted_shuffle/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.name          = "weighted_shuffle"
   gem.version       = WeightedShuffle::VERSION
-  gem.summary       = %q{TODO: Summary}
-  gem.description   = %q{TODO: Description}
+  gem.summary       = %q{Fisher-Yates-Shuffle algorithm with weight support}
+  gem.description   = <<-EOF
+  An extension to the Fisher-Yates-Shuffle algorithm to support weights.  It
+  includes a ruby core extension for arrays.
+  EOF
   gem.license       = "MIT"
   gem.authors       = ["Frank C. Eckert"]
   gem.email         = "frank.eckert@boost-project.com"
