@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
   gem.version       = WeightedShuffle::VERSION
   gem.summary       = %q{Fisher-Yates-Shuffle algorithm with weight support}
   gem.description   = <<-EOF
-  An extension to the Fisher-Yates-Shuffle algorithm to support weights.  It
+  An extension to the Fisher-Yates-Shuffle algorithm to support weights. It
   includes a ruby core extension for arrays.
   EOF
   gem.license       = "MIT"
@@ -26,4 +26,9 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'simplecov'
   gem.add_development_dependency 'coveralls'
   gem.add_development_dependency 'rubygems-tasks', '~> 0.2'
+
+  if ENV['RUBY_VERSION'] =~ /rbx/
+    gem.add_dependency 'rubysl'
+    gem.add_development_dependency 'rubinius-coverage'
+  end
 end
