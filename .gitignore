@@ -4,3 +4,4 @@ bin/
 .bundle/
 coverage/
 *.gem
+Gemfile.lock
