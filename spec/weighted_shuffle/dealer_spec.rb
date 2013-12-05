@@ -5,6 +5,8 @@ module WeightedShuffle
     describe '#weighted_shuffle' do
       [[ [[:a, 1], [:b, 2]], [:a, :b] ],
        [ [[1, 1], [2, 3]], [1, 2] ],
+       [ [[1, 1], [2, 0]], [1, 2] ],
+       [ [[1, 1], [2, 0], [3, 0]], [1, 2, 3] ],
        [ [[2.0, 1], [:a, 1.5], ['a', 2.3]], [2.0, :a, 'a'] ]]
         .each do |input, output|
 
