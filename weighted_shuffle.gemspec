@@ -26,7 +26,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'simplecov'
   gem.add_development_dependency 'coveralls'
   gem.add_development_dependency 'rubygems-tasks', '~> 0.2'
-  gem.add_development_dependency 'pry'
 
   if ENV['RUBY_VERSION'] =~ /rbx/
     gem.add_dependency 'rubysl'
