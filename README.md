@@ -39,6 +39,10 @@ integrated into ruby Array:
     array.weighted_shuffle
     => [:b, :a]
 
+or with factor
+
+    array.weighted_shuffle factor: 3
+
 ## Contributing
 
 1. Fork it
