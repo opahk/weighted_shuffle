@@ -41,8 +41,10 @@ module WeightedShuffle
 
         it 'big factor has a big impact' do
           input = [[1, 1], [2, 1], [3, 1.01]]
-          sample = Dealer.new(input).weighted_shuffle factor: 100_000
-          expect(sample.first).to eq(3)
+          samples = 10_000.times.map do
+            Dealer.new(input).weighted_shuffle factor: 100_000
+          end
+          expect(samples.map(&:first).count(3)).to eq(samples.size)
         end
 
         it 'gives expected relative frequency ' do
