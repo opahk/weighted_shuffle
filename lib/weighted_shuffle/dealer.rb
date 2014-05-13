@@ -1,4 +1,6 @@
 require 'active_support/core_ext/enumerable'
+require 'bigdecimal'
+require 'bigdecimal/util'
 
 module WeightedShuffle
   class Dealer < Struct.new(:array)
@@ -7,9 +9,9 @@ module WeightedShuffle
       factor = options.delete(:factor)
       a = Marshal.load Marshal.dump(array)
       unless factor.nil?
-        a.map! { |k, v| [k, v**factor] }
+        a.map! { |k, v| [k, (v**factor).to_d] }
       end
-      sum = a.sum { |k, v| v || 0.0 }
+      sum = a.sum { |k, v| v.to_d || 0.0.to_d }
       b = []
       a.length.times do
         random = SecureRandom.random_number * sum
