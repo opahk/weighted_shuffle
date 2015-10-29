@@ -1,7 +1,8 @@
+sudo: false
 language: ruby
 rvm:
   - 1.9.3
   - 2.0.0
   - jruby-19mode
-  - rbx-2.1.1
+  - rbx-2.5.8
 script: bundle exec rspec
